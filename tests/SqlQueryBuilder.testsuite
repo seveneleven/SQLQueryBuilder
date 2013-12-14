@@ -1,0 +1,3 @@
+TInsertQueryTests:InsertQueryTests.pas
+TUpdateQueryTests:UpdateQueryTests.pas
+TWhereClauseTests:WhereClauseTests.pas
