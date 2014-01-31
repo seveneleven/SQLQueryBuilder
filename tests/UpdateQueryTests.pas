@@ -19,6 +19,7 @@ type
     procedure TestThatIntegerValueGetsAdded;
     procedure TestThatMultipleValuesAreAdded;
     procedure TestThatWhereClauseIsAppended;
+    procedure TestThatUpdateQueryIsBuiltFromScratch;
   end;
 
 
@@ -78,6 +79,12 @@ begin
       Where('id').
         Equals(20).
         build());
+end;
+
+procedure TUpdateQueryTests.TestThatUpdateQueryIsBuiltFromScratch;
+begin
+  TestThatStringValueGetsAdded();
+  TestThatStringValueGetsAdded();
 end;
 
 end.

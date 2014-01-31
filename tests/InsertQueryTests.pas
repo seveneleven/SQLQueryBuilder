@@ -21,6 +21,7 @@ type
     procedure TestThatQueryCanTakeMultipleValues;
     procedure TestThatFalseBooleanGetsConvertedToZero;
     procedure TestThatTrueBooleanGetsConvertedToOne;
+    procedure TestThatASecondQueryIsBuiltFromScratch;
   end;
 
 
@@ -94,6 +95,12 @@ begin
     queryBuilder.Insert.Into('table').
       value('boolean', True).
         build());
+end;
+
+procedure TInsertQueryTests.TestThatASecondQueryIsBuiltFromScratch;
+begin
+  TestThatStringValueGetsAddedToInsertQuery();
+  TestThatStringValueGetsAddedToInsertQuery();
 end;
 
 end.

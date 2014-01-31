@@ -80,6 +80,8 @@ end;
 function TInsertBuilder.Into(table: String): TInsertBuilder;
 begin
   QueryTable:= table;
+  Columns:= '';
+  Values:= '';
   Result:= Self;
 end;
 
@@ -142,6 +144,7 @@ end;
 procedure TUpdateQueryBuilder.setTable(table: String);
 begin
   QueryTable:= table;
+  SetQuery:= '';
 end;
 
 function TUpdateQueryBuilder.SetValue(column: String; value: String): TUpdateQueryBuilder;
